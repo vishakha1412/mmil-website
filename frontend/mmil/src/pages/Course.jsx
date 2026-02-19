@@ -1,4 +1,8 @@
+import PopUp from "../componenets/PopUp"
  export const Course = () => {
+    const handleCourseClick = (courseName) => {
+        PopUp(`You clicked on ${courseName} course!`);
+    }
   return (
     <section className="bg-[rgba(13,13,18,1)] px-6 md:px-20 py-24">
       
@@ -59,7 +63,7 @@
               <span>📘 Beginner</span>
               <span>⭐ 4.8/5</span>
  </div>
-            <button className="bg-[rgba(113,218,43,1)] text-black px-6 py-3 rounded-lg shadow-md hover:bg-green-500 transition font-semibold font-['DM_Sans']">
+            <button className="bg-[rgba(113,218,43,1)] text-black px-6 py-3 rounded-lg shadow-md hover:bg-green-500 transition font-semibold font-['DM_Sans']" onClick={() => handleCourseClick("Artificial Intelligence")}>
               View Course
             </button>
           </div>
@@ -86,7 +90,7 @@
               <span>📘 Beginner</span>
               <span>⭐ 0/5</span>
             </div>
-            <button className="bg-gray-500 text-white px-6 py-3 rounded-lg shadow-md cursor-not-allowed font-semibold font-['DM_Sans']">
+            <button className="bg-gray-500 text-white px-6 py-3 rounded-lg shadow-md cursor-not-allowed font-semibold font-['DM_Sans']" onClick={() => handleCourseClick("Python World")}>
               Coming Soon
             </button>
  </div>

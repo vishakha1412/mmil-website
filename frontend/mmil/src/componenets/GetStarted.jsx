@@ -1,6 +1,10 @@
 import React from "react";
-
+import PopUp from "./PopUp";
 export const GetStarted = () => {
+    const handlechange=(e)=>{
+        
+        PopUp("Get Started Successfully!");
+    }
   return (
     <section className="px-6 md:px-20 py-24">
       <div
@@ -38,7 +42,7 @@ export const GetStarted = () => {
           className="
             bg-[rgba(113,218,43,1)] text-[rgba(13,13,18,1)] px-8 py-4 tracking-[-0.5%] leading-[120%] rounded-[12px]  shadow-md  hover:bg-[#6fbb3d]  transition  font-['DM_Sans']  font-medium
             text-[20px] md:text-[20px] w-full max-w-[190px] h-[46px]
-          "
+          " onClick={() => handlechange()}
         >
           Get Started
         </button>

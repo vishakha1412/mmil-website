@@ -1,12 +1,14 @@
  import React from "react";
+ import PopUp from "./PopUp";
 import { FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { useState } from "react";
 const Footer = () => {
     const[user,setUser]=useState("");
     function handleChange(e){
-        setUser(" ");
-        alert("Subscribed with "+user);
+        
+        PopUp("Subscribed Successfully with email: " +  user);
+        setUser("");
     }
   return (
     <footer className="bg-[rgba(13,13,18,1)] text-white px-6 md:px-20 py-16 w-full max-md:items-center">

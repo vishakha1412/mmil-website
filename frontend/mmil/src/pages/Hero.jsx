@@ -1,9 +1,14 @@
- export function Hero() {
+import PopUp from "../componenets/PopUp";
+
+export function Hero() {
+    const handleClick = (e) => {
+        PopUp( e);
+    }
   return (
-    <section className="flex flex-col md:flex-row items-center px-6 sm:px-8 md:px-16 py-20 bg-[rgba(13,13,18,1)] text-white w-full min-h-screen mx-auto justify-between max-w-[1380px]">
+    <section className="flex flex-col md:flex-row items-center px-6 sm:px-8 md:px-16 py-20 bg-[rgba(13,13,18,1)] text-white w-full  mx-auto justify-between max-w-[1380px]">
       
    
-      <div className="w-full md:w-1/2 text-left space-y-6">
+      <div className="w-full md:w-1/2 text-left space-y-6 max-md:text-center ">
         <h2 className="font-bold text-[36px] sm:text-[48px] md:text-[64px] leading-tight md:leading-[76.8px] tracking-[-0.02em] font-[Baloo_2]">
           Step up in AI future with  
           <span className="inline-block bg-gradient-to-r from-green-400 to-blue-500 text-transparent bg-clip-text px-4 py-2 rounded-md">
@@ -15,11 +20,14 @@
         </p>
 
        
-        <div className="flex flex-col sm:flex-row mt-8 max-w-[400px] gap-6 justify-start">
-          <button className="bg-[rgba(31,210,255,1)] text-[rgba(13,13,18,1)] px-8 py-4 rounded-[8px] shadow-lg w-full sm:w-auto hover:bg-blue-500 transition font-semibold font-['DM_Sans']">
+        <div className="flex flex-col sm:flex-row mt-8  max-md:justify-center gap-6 justify-start ">
+          <button className="bg-[rgba(31,210,255,1)] text-[rgba(13,13,18,1)] px-8 py-4 rounded-[8px] shadow-lg w-full sm:w-auto hover:bg-blue-500 transition font-semibold font-['DM_Sans']"
+            onClick={() => handleClick("Free Trial started")} >
             Start Free Trial
           </button>
-          <button className="bg-[rgba(113,218,43,1)] text-black px-8 py-4 rounded-[8px] shadow-lg w-full sm:w-auto hover:bg-green-500 transition font-semibold font-['DM_Sans']">
+          <button className="bg-[rgba(113,218,43,1)] text-black px-8 py-4 rounded-[8px] shadow-lg w-full sm:w-auto hover:bg-green-500 transition font-semibold font-['DM_Sans']"
+              onClick={() => handleClick("Get Started")}
+          >
             Get Started
           </button>
         </div>

@@ -3,7 +3,7 @@ import { Navbar } from './componenets/Navbar'
 import {Hero} from './pages/Hero'
 import Feature from './pages/Feature'
 import Footer from './componenets/Footer'
- 
+import { Toaster } from 'react-hot-toast'
 import Testimonials from './pages/Testimonials'
 import { About } from './pages/About'
 import { Course } from './pages/Course'
@@ -14,6 +14,7 @@ const App = () => {
    <div>
       <div className="bg-[rgba(13,13,18,1)] font-sans">
        <Navbar />
+       <Toaster  position="top-center"/>
       <Hero />
       <Feature/>
       <About id='about'/>

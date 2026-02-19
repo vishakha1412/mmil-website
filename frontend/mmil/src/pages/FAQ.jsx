@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PopUp from "../componenets/PopUp";
 
 const faqs = [
   { question: "What is PracAI?", answer: "PracAI is a platform that makes Artificial Intelligence fun, accessible, and meaningful for learners." },
@@ -14,6 +15,9 @@ export const FAQ = () => {
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+  const handleContactClick = () => {
+    PopUp("Thank you for reaching out! We'll get back to you soon.");
+  }
 return (
     <section className="bg-[rgba(13,13,18,1)] px-6 md:px-20 py-24">
       
@@ -72,7 +76,7 @@ return (
         <p className="text-[rgba(250,250,250,0.7)] font-['DM_Sans'] text-[24px] font-bold font-[700] mb-6">
           Still got questions? We're happy to help
         </p>
-        <button className="bg-[rgba(255,157,0,1)] text-[rgba(13,13,18,1)] px-8 py-4 rounded-[12px] shadow-md hover:bg-[rgba(255,157,0,0.8)] transition  font-['DM_Sans'] font-bold w-[190px] h-[46px] flow-horizontal text-h-[24px] text-[20px]  font-[500]  flex items-center justify-center">
+        <button className="bg-[rgba(255,157,0,1)] text-[rgba(13,13,18,1)] px-8 py-4 rounded-[12px] shadow-md hover:bg-[rgba(255,157,0,0.8)] transition  font-['DM_Sans'] font-bold w-[190px] h-[46px] flow-horizontal text-h-[24px] text-[20px]  font-[500]  flex items-center justify-center" onClick={() => handleContactClick()}>
           Contact Us
         </button>
       </div>
