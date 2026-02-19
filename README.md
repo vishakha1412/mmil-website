@@ -1,0 +1,1 @@
+This is just the frontend implementation of the website. Many advanced features such as backend integration, authentication, course management system, payment gateway, and dynamic content handling are yet to be added in future development phases.
